@@ -179,7 +179,7 @@ const configValidationOTP = {
     const resultCurrentOTP = await askQuestion("Masukkan OTP: ");
     console.log("🚀 ~ file: main.js:180 ~ resultCurrentOTP", resultCurrentOTP)
     // Encrypt Hasil OTP
-    const encryptResultOTP = 123445
+    const encryptResultOTP = encryptionMethodNomer(resultCurrentOTP);
     const payloadValidateOTP = {
       transid: responseReqOTP.data.transid,
       otp: encryptResultOTP,
